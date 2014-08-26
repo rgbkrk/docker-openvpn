@@ -21,11 +21,11 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 * Generate a client certificate without a passphrase
 
-        docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass
+        docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn easyrsa build-client-full LEGITVPN nopass
 
 * Retrieve the client configuration with embedded certificates
 
-        docker run --volumes-from $OVPN_DATA --rm kylemanna/openvpn ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
+        docker run --volumes-from $OVPN_DATA --rm kylemanna/openvpn ovpn_getclient LEGITVPN > LEGITVPN.ovpn
 
 
 ## How Does It Work?
